@@ -3,14 +3,14 @@ import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
 const Formulario = () => {
-    const time = [
-    'Programação',
-    'Front-End',
-    'Data Science',
-    'Develops',
-    'UX e Design',
-    'Mobile',
-    'Inovação e Gestão'
+    const time =
+    [
+        'Programação',
+        'Front-End',
+        'Develops',
+        'UX e Design',
+        'Mobile',
+        'Inovação e Gestão'
     ]
 
     return (
@@ -19,7 +19,7 @@ const Formulario = () => {
                 <h2>Preencha os dados para criar o card do colaborador</h2>
                 <CampoTexto label="Nome" placeholder="Digite seu nome" />
                 <CampoTexto label="Cargo" placeholder="Digite seu cargo" />
-                <CampoTexto label="Imagem2" placeholder="Digite o endereço da imagem" />
+                <CampoTexto label="Imagem" placeholder="Digite o endereço da imagem" />
                 <ListaSuspensa item={time}/>
             </form>
         </section>
