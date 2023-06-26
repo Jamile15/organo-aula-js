@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './CampoTexto.css'
 
 const CampoTexto = (props) => {
@@ -6,11 +5,10 @@ const CampoTexto = (props) => {
     const placeholderModificada = `${props.placeholder}...`
 
     console.log(placeholderModificada)
-    const [valor, setValor] = useState('jamile ')
+  
 
     const aoDigitado = (evento) => {
-        setValor (evento.target.value)
-        console.log(valor)
+        props.aoAlterado(evento.target.value)
     }
 
     return (
@@ -19,7 +17,7 @@ const CampoTexto = (props) => {
                 {props.label}
             </label>
             <input
-                value={valor}
+                value={props.valor}
                 onChange={aoDigitado}
                 required={props.obrigatoria}
                 placeholder={placeholderModificada}
