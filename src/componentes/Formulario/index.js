@@ -7,7 +7,7 @@ import './Formulario.css'
 const Formulario = () => {
 
 
-    const time =
+    const timeCargo =
         [
             'Programação',
             'Front-End',
@@ -20,10 +20,11 @@ const Formulario = () => {
         const [nome, setNome] = useState('')
         const [cargo, setcargo] = useState('')
         const [imagem, setImagem] = useState('')
+        const [time, setTime] = useState('')
 
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        console.log( 'form enviado' ,nome, cargo, imagem)
+        console.log( 'form enviado' ,nome, cargo, imagem, time)
     }
 
     return (
@@ -56,7 +57,10 @@ const Formulario = () => {
                 <ListaSuspensa
                     obrigatoria={true}
                     label="Time"
-                    item={time}
+                    item={timeCargo}
+                    valor={time}
+                    aoAlterado={valor => setTime(valor)}
+
                      />
 
                 <Botao>
