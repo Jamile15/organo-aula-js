@@ -10,6 +10,7 @@ const Formulario = (props) => {
     const timeCargo =
         [
             'Programação',
+            'Data Science',
             'Front-End',
             'Develops',
             'UX e Design',
